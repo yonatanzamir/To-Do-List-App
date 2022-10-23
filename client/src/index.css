@@ -1,0 +1,148 @@
+:root {
+	--primary: #c4bec0;
+	--secondary: #6d7372;
+	--light-alt: #61759b;
+	--dark: #637da7;
+	--dark-alt: #18264c;
+}
+#card{
+	border-radius: .75rem; 
+	background-color: #f2f2ef;
+}
+#card-data{
+	margin: 2%;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Fira Sans", sans-serif;
+}
+
+body {
+	background-color: var(--dark-alt);
+	color: var(--light);
+}
+
+.App {
+	padding: 32px;
+	
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 32px;
+}
+hr{
+	margin-top: 1cm;
+}
+h3 {
+	font-size: 18px;
+	color: var(--light-alt);
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 16px;
+}
+
+.todo {
+	position: relative;
+	background-color: var(--dark);
+	padding: 16px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	transition: 0.5s;
+	cursor: pointer;
+	margin-bottom: 16px;
+}
+
+.todo:hover {
+	opacity: 0.8;
+}
+
+.todo .checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 16px;
+	border-radius: 50%;
+	background-color: var(--dark-alt);
+	background-image: linear-gradient(to bottom, transparent, transparent);
+	transition: 0.4s;
+}
+
+.todo.is-done .checkbox {
+	background-color: var(--primary);
+	background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.todo .task-name {
+	font-size: 20px;
+}
+
+.todo.is-done .task-name {
+	text-decoration: line-through;
+}
+
+.todo .delete-todo {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 16px;
+	color: var(--light);
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #c91b1b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+}
+
+
+.add-todo-input {
+
+	appearance: none;
+	outline: none;
+	border: none;
+	background-color: #f2f2ef;
+	padding: 16px;
+	border-radius: 16px;
+	min-width: 50%;
+	width: 80%;
+
+	box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+}
+
+.button {
+	padding: 16px 32px;
+	margin-left: 10px;
+	border-radius: 929px;
+	background-image: linear-gradient(to right, var(--primary), var(--secondary));
+	display: inline-block;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: 16px;
+	text-align: center;
+	cursor: pointer;
+
+}
+.button:hover {
+	padding: 16px 32px;
+	margin-left: 10px;
+	border-radius: 929px;
+	background-image: linear-gradient(to right, var(--primary), var(--secondary));
+	opacity: 0.8;
+	display: inline-block;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: 16px;
+	text-align: center;
+	cursor: pointer;
+
+}
